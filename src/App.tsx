@@ -1,9 +1,10 @@
-
-import {Form} from "./components/form"
+import { Form } from "./components/form";
 function App() {
-  return <>
-  <Form/>
-  </>;
+  return (
+    <>
+      <Form />
+    </>
+  );
 }
 
 export default App;

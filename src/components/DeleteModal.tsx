@@ -13,11 +13,11 @@ interface ModalProps {
   onclose: () => void;
 }
 
-export default function ModalEdit({
+export default function DeleteModal({
   open,
   onCancel,
   onConfirm,
-  onclose,
+  onclose
 }: ModalProps) {
   return (
     <Dialog open={open} onClose={onCancel} className="relative z-10">
@@ -42,7 +42,7 @@ export default function ModalEdit({
                       as="h3"
                       className="text-base font-semibold leading-6 text-gray-900"
                     >
-                      Edit Alarm
+                      Delete Alarm
                     </DialogTitle>
                     <div>
                       <button
@@ -54,8 +54,8 @@ export default function ModalEdit({
                     </div>
                   </div>
                   <div className="mt-2">
-                    <p className="text-sm">
-                      Are you sure you want to edit your AlarmTime?
+                    <p className="text-sm ">
+                      Are you sure you want to Delete  alarm?
                     </p>
                   </div>
                 </div>
@@ -65,16 +65,14 @@ export default function ModalEdit({
               <button
                 type="button"
                 onClick={onConfirm}
-                className="inline-flex w-full justify-center border-2 border-white rounded-md px-3 py-2 text-sm font-semibold hover:text-white shadow-blue-300/60 shadow-lg bg-[#e1363b] hover:bg-redApp/50 sm:ml-3 sm:w-auto disabled:bg-grayApp disabled:hover:text-black"
-              >
-                Edit
+                className="inline-flex w-full justify-center border-2 border-white rounded-md px-3 py-2 text-sm font-semibold hover:text-white shadow-blue-300/60 shadow-lg bg-[#e1363b] hover:bg-redApp/50 sm:ml-3 sm:w-auto disabled:bg-grayApp disabled:hover:text-black"                >
+                Yes
               </button>
               <button
                 type="button"
                 data-autofocus
                 onClick={onCancel}
-                className="mt-3 inline-flex w-full justify-center rounded-md border-white hover:text-white shadow-blue-300/60 shadow-lg bg-[#0369a1] hover:bg-blueApp_2/50 px-3 py-2 text-sm font-semibold text-gray-900 border-2 sm:mt-0 sm:w-auto"
-              >
+                className="mt-3 inline-flex w-full justify-center rounded-md border-white hover:text-white shadow-blue-300/60 shadow-lg bg-[#0369a1] hover:bg-blueApp_2/50 px-3 py-2 text-sm font-semibold text-gray-900 border-2 sm:mt-0 sm:w-auto"              >
                 Cancel
               </button>
             </div>
